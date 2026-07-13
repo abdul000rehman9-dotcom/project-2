@@ -25,6 +25,7 @@ export default function Contact({ selectedModel }: ContactProps) {
 
   const [isSuccess, setIsSuccess] = useState(false);
   const [validationError, setValidationError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Sync selected model from partnership clicks
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function Contact({ selectedModel }: ContactProps) {
     }));
   };
 
-  const handleFormSubmit = (e: FormEvent) => {
+  const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
     // Quick validation
@@ -70,7 +71,36 @@ export default function Contact({ selectedModel }: ContactProps) {
     }
 
     setValidationError("");
-    setIsSuccess(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/partnerships", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName.trim(),
+          whatsappNumber: formData.whatsappNumber.trim(),
+          city: formData.city.trim(),
+          clubName: formData.clubName.trim(),
+          partnershipModel: formData.partnershipModel,
+          message: formData.message.trim(),
+        }),
+      });
+
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit partnership request.");
+      }
+
+      setIsSuccess(true);
+    } catch (err) {
+      console.error("Partnership submission error:", err);
+      setValidationError((err as Error).message || "A connection error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleOpenWhatsapp = () => {
@@ -282,9 +312,10 @@ export default function Contact({ selectedModel }: ContactProps) {
                   <button
                     type="submit"
                     id="cta-contact-submit"
-                    className="w-full sm:w-auto px-10 py-4 bg-[#c09f53] text-[#0D3B0D] font-sans text-xs tracking-widest uppercase hover:bg-[#aa863e] transition-colors font-bold rounded-sm shadow-lg cursor-pointer"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto px-10 py-4 bg-[#c09f53] text-[#0D3B0D] font-sans text-xs tracking-widest uppercase hover:bg-[#aa863e] transition-colors font-bold rounded-sm shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Request Consultation
+                    {isSubmitting ? "Submitting..." : "Request Consultation"}
                   </button>
                   <div className="flex items-center gap-2 text-[10px] text-[#e5d7af]/50 uppercase tracking-widest">
                     <Shield size={12} className="text-[#c09f53]" />

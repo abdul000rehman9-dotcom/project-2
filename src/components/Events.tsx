@@ -25,6 +25,7 @@ export default function Events() {
 
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [validationError, setValidationError] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   const activeTab =
     EVENT_TABS.find((tab) => tab.id === activeTabId) || EVENT_TABS[0];
@@ -69,7 +70,7 @@ export default function Events() {
     setValidationError("");
   };
 
-  const handleSubmitBooking = (e: FormEvent) => {
+  const handleSubmitBooking = async (e: FormEvent) => {
     e.preventDefault();
     if (!fullName.trim()) {
       setValidationError("Full Name is required.");
@@ -83,8 +84,40 @@ export default function Events() {
       setValidationError("Please provide a valid Email Address.");
       return;
     }
+
     setValidationError("");
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/bookings", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          selectedEventType,
+          selectedVenue,
+          selectedGuestCount,
+          preferredDate,
+          fullName: fullName.trim(),
+          phoneNumber: phoneNumber.trim(),
+          emailAddress: emailAddress.trim(),
+          additionalNotes: additionalNotes.trim(),
+        }),
+      });
+
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit booking inquiry.");
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Booking submission error:", err);
+      setValidationError((err as Error).message || "A connection error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetBookingForm = () => {
@@ -592,9 +625,10 @@ export default function Events() {
                         <button
                           type="submit"
                           id="cta-booking-submit"
-                          className="w-full sm:w-auto px-12 py-4 bg-[#c09f53] text-[#112d11] font-sans text-xs tracking-widest uppercase hover:bg-[#aa863e] transition-colors font-bold rounded-sm flex items-center justify-center gap-1.5 cursor-pointer shadow-lg"
+                          disabled={isSubmitting}
+                          className="w-full sm:w-auto px-12 py-4 bg-[#c09f53] text-[#112d11] font-sans text-xs tracking-widest uppercase hover:bg-[#aa863e] transition-colors font-bold rounded-sm flex items-center justify-center gap-1.5 cursor-pointer shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                          SUBMIT ENQUIRY
+                          {isSubmitting ? "SUBMITTING..." : "SUBMIT ENQUIRY"}
                         </button>
                       </div>
                     </motion.div>
