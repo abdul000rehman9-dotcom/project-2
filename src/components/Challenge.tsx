@@ -100,7 +100,7 @@ export default function Challenge() {
 
               {/* Badli hui image yahan hai */}
               <img
-                src="/challenge.jpg"
+                src="/challenge.jpeg"
                 alt="Club Challenges"
                 className="absolute inset-0 w-full h-full object-cover grayscale brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out z-10"
                 onError={(e) => {

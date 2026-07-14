@@ -133,7 +133,7 @@ export const DIRECTORS: DirectorProfile[] = [
   {
     name: "Muhammad Amin ud Din",
     title: "CHIEF EXECUTIVE OFFICER",
-    imageUrl: "/images/director1.jpg",
+    imageUrl: "/images/director1.png",
     experience: [
       { role: "CEO", company: "Ultimate Marketing Solutions (Pvt) Ltd", years: "2021-Present" },
       { role: "CEO", company: "Pakistan Tracker & Services (Pvt) Ltd", years: "2018-Present" },
@@ -144,7 +144,7 @@ export const DIRECTORS: DirectorProfile[] = [
   {
     name: "Col. Amir Shakeel",
     title: "GROUP DIRECTOR",
-    imageUrl: "/images/director2.jpg",
+    imageUrl: "/images/director2.png",
     experience: [
       { role: "MILITARY", company: "Pakistan Army - Served", years: "1983-2013" },
       { role: "DIRECTOR", company: "Admin & Security, City School System", years: "2012-2013" },
@@ -207,7 +207,7 @@ export const EVENT_TABS: EventTab[] = [
     title: "Corporate Events",
     tagline: "Where Business Meets Distinction",
     description: "From high-stakes board conferences and product launches to annual galas and team-building retreats, we architect corporate experiences that leave lasting impressions. Every detail is curated to reflect your brand's prestige.",
-    imageUrl: "/images/event_corporate.jpg",
+    imageUrl: "/images/event_corporate.jpeg",
     offers: [
       "Conferences & Seminars",
       "Product Launches",
@@ -222,7 +222,7 @@ export const EVENT_TABS: EventTab[] = [
     title: "Matrimonial Events",
     tagline: "Memories Woven in Gold",
     description: "Your wedding day deserves nothing less than perfection. We design every moment — from the mehndi to the walima — with exquisite attention to detail, blending tradition with contemporary elegance in Pakistan's finest venues.",
-    imageUrl: "/images/event_matrimonial.jpg",
+    imageUrl: "/images/event_matrimonial.jpeg",
     offers: [
       "Mehndi & Dholki",
       "Nikah Ceremonies",
@@ -237,7 +237,7 @@ export const EVENT_TABS: EventTab[] = [
     title: "Birthday Celebrations",
     tagline: "Celebrations Worth Remembering",
     description: "Milestones should be celebrated in style. From intimate family dinners to extravagant themed parties, we create joyful, seamless celebrations tailored to your personal taste and guest preferences.",
-    imageUrl: "/images/event_birthday.jpg",
+    imageUrl: "/images/event_birthday.jpeg",
     offers: [
       "Theme Concept & Decor",
       "Gourmet Catering",

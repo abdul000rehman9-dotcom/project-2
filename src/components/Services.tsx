@@ -46,7 +46,7 @@ export default function Services() {
 
         {/* Row 1 Grid: Alternating 2x2 with NO GAP between the four cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[#c09f53]/15 mb-0" id="services-row-1">
-          {/* Card 1: Pillar 1 Image - Changed to sales.jpg */}
+          {/* Card 1: */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -56,7 +56,7 @@ export default function Services() {
           >
             <div className="absolute inset-0 bg-[#0a2e0a]/20 z-10"></div>
             <img
-              src="/sales.jpg"
+              src="/sales.jpeg"
               alt={row1Items[0]?.title}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -105,7 +105,7 @@ export default function Services() {
             </p>
           </motion.div>
 
-          {/* Card 4: Pillar 2 Image (alternating: image second) - Changed to marketing.jpg */}
+          {/* Card 4: Pillar 2 Image  */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -115,7 +115,7 @@ export default function Services() {
           >
             <div className="absolute inset-0 bg-[#0a2e0a]/20 z-10"></div>
             <img
-              src="/marketing.jpg"
+              src="/marketing.jpeg"
               alt={row1Items[1]?.title}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

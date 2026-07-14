@@ -26,7 +26,7 @@ export default function Team() {
       discipline: "FINANCE",
       desc: "A CFA charterholder with deep expertise in hospitality-sector financial structuring and P&L management.",
       pills: ["REVENUE STRATEGY", "BUDGET ARCHITECTURE", "FINANCIAL MODELLING"],
-      image: "/client2.jpg",
+      image: "/client2.png",
     },
     {
       name: "Ayesha Rauf",
@@ -42,7 +42,7 @@ export default function Team() {
       discipline: "TECHNICAL",
       desc: "Ensuring every square metre of your facility performs at the highest standard, day after day.",
       pills: ["FACILITY ENGINEERING", "SMART SYSTEMS", "PREVENTIVE MAINTENANCE"],
-      image: "/client4.jpg",
+      image: "/client4.png",
     },
     {
       name: "Nadia Khalid",
@@ -64,9 +64,9 @@ export default function Team() {
 
   const clients = [
     { id: 1, init: "AAJ", name: "AA Joyland", sub: "FAMILY ENTERTAINMENT", img: "/client1.jpg" },
-    { id: 2, init: "DGC", name: "DHA Golf Club", sub: "GOLF & RECREATION", img: "/client2.jpg" },
+    { id: 2, init: "DGC", name: "DHA Golf Club", sub: "GOLF & RECREATION", img: "/client2.png" },
     { id: 3, init: "DCC", name: "DHA Creek Club", sub: "PREMIUM HOSPITALITY", img: "/client3.jpg" },
-    { id: 4, init: "RH", name: "Ramada Hotel", sub: "LUXURY HOSPITALITY", img: "/client4.jpg" },
+    { id: 4, init: "RH", name: "Ramada Hotel", sub: "LUXURY HOSPITALITY", img: "/client4.png" },
     { id: 5, init: "CSS", name: "City School System", sub: "ACADEMIC INSTITUTION", img: "/client5.jpg" },
     { id: 6, init: "TS", name: "Turk Station", sub: "F&B CONCEPT", img: "/client6.jpg" },
   ];

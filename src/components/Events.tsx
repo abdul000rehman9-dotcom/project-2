@@ -31,13 +31,13 @@ export default function Events() {
     EVENT_TABS.find((tab) => tab.id === activeTabId) || EVENT_TABS[0];
 
   const tabImages: Record<string, string> = {
-    corporate: "/corporate.jpg",
-    matrimonial: "/Matrimonial.jpg",
-    birthday: "/Birthday.jpg",
-    school: "/school_academic.jpg",
+    corporate: "/corporate.jpeg",
+    matrimonial: "/Matrimonial.jpeg",
+    birthday: "/Birthday.jpeg",
+    school: "/school_academic.jpeg",
   };
 
-  const currentImageSrc = tabImages[activeTabId] || "/corporate.jpg";
+  const currentImageSrc = tabImages[activeTabId] || "/corporate.jpeg";
 
   const handleNextStep = () => {
     if (bookingStep === 1) {

@@ -30,7 +30,7 @@ export default function About() {
               </div>
 
               <img
-                src="/about.jpg"
+                src="/about.jpeg"
                 alt="25 Years of Shaping Pakistan's Leisure Industry"
                 className="absolute inset-0 w-full h-full object-cover z-10  brightness-95"
                 onError={(e) => {
