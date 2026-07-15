@@ -4,7 +4,7 @@ const LOCAL_DIRECTORS = [
   {
     name: "Muhammad Amin ud Din",
     title: "C.E.O",
-    image: "/director1.png",
+    image: "/director1.jpg",
     initials: "M.A.",
     experience: [
       { role: "CEO", company: "Ultimate Marketing Solutions (pvt) Ltd", years: "Since 2021" },
@@ -16,7 +16,7 @@ const LOCAL_DIRECTORS = [
   {
     name: "Col. Amir Shakeel",
     title: "Group Director",
-    image: "/director2.png",
+    image: "/director2.jpg",
     initials: "C.A.",
     experience: [
       { role: "Served", company: "in ARMY", years: "1983 to 2013" },

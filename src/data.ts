@@ -133,7 +133,7 @@ export const DIRECTORS: DirectorProfile[] = [
   {
     name: "Muhammad Amin ud Din",
     title: "CHIEF EXECUTIVE OFFICER",
-    imageUrl: "/images/director1.png",
+    imageUrl: "/images/director1.jpg",
     experience: [
       { role: "CEO", company: "Ultimate Marketing Solutions (Pvt) Ltd", years: "2021-Present" },
       { role: "CEO", company: "Pakistan Tracker & Services (Pvt) Ltd", years: "2018-Present" },
@@ -144,7 +144,7 @@ export const DIRECTORS: DirectorProfile[] = [
   {
     name: "Col. Amir Shakeel",
     title: "GROUP DIRECTOR",
-    imageUrl: "/images/director2.png",
+    imageUrl: "/images/director2.jpg",
     experience: [
       { role: "MILITARY", company: "Pakistan Army - Served", years: "1983-2013" },
       { role: "DIRECTOR", company: "Admin & Security, City School System", years: "2012-2013" },
