@@ -6,7 +6,7 @@ import { connectDb } from "./backend/src/dbService";
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
   // 1. Setup global express request parsers
   app.use(express.json());
@@ -51,7 +51,7 @@ async function startServer() {
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`=============================================================`);
     console.log(`  HORIZON LEISURE CRM DEV SERVER BOOTED SUCCESS!              `);
-    console.log(`  Port Connection: http://localhost:${PORT}                  `);
+    console.log(`Server running on port ${PORT}`);
     console.log(`  Default Admin Panel Route: http://localhost:${PORT}/admin    `);
     console.log(`  Default Credentials: admin / password123                  `);
     console.log(`=============================================================`);
