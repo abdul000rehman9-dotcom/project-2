@@ -61,8 +61,8 @@ export default function App() {
             <Services />
             <Partnership onSelectModel={handleSelectModel} />
             <Difference />
-            <Directors />
-            <Team />
+            {/* <Directors /> */}
+            {/* <Team /> */}
             <Events />
             <Clients />
             <OurImpact />
