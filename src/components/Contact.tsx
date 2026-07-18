@@ -224,7 +224,7 @@ export default function Contact({ selectedModel }: ContactProps) {
                     <input
                       type="tel"
                       name="whatsappNumber"
-                      placeholder="+92 303 2789312"
+                      placeholder="+92 300 0000000"
                       id="contact-phone-input"
                       value={formData.whatsappNumber}
                       onChange={handleChange}
