@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 import { Phone, Mail, MapPin, MessageSquare, CheckCircle, Shield } from "lucide-react";
 
 // Configurable constants for easy editing
-const WHATSAPP_NUMBER = "+923001234567";
-const WHATSAPP_DISPLAY = "+92 300 1234567";
-const PHONE_NUMBER = "+92 300 1234567";
+const WHATSAPP_NUMBER = "+92 3032789312";
+const WHATSAPP_DISPLAY = "+92 3032789312";
+const PHONE_NUMBER = "+92 3032789312";
 const EMAIL_ADDRESS = "contact@horizonleisure.pk";
 const OFFICE_LOCATION = "Karachi, Pakistan";
 
@@ -224,7 +224,7 @@ export default function Contact({ selectedModel }: ContactProps) {
                     <input
                       type="tel"
                       name="whatsappNumber"
-                      placeholder="+92 300 0000000"
+                      placeholder="+92 303 2789312"
                       id="contact-phone-input"
                       value={formData.whatsappNumber}
                       onChange={handleChange}
