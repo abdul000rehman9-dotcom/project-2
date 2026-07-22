@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 
-// Easily configurable WhatsApp Number in international format
-const WHATSAPP_NUMBER = "923000000000"; 
+//  WhatsApp Number 
+const WHATSAPP_NUMBER = "923222165557"; 
 
 // Pre-filled message (optional, can be empty or customized)
 const DEFAULT_MESSAGE = "Hello! I am interested in Horizon Leisure Group's premium event and booking services. I would love to connect.";
@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-5 right-5 z-50"
       id="whatsapp-sticky-wrapper"
     >
-      {/* Outer Pulse Glow Effect in theme gold color */}
+      {/* Outer Pulse Glow Effect */}
       <div className="absolute inset-0 rounded-full bg-[#C9A054]/20 animate-ping pointer-events-none" />
 
       <motion.a

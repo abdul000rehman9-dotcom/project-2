@@ -10,23 +10,46 @@ import {
   Testimonial,
   FAQItem
 } from "./types";
-
 export const CHALLENGE_ITEMS: ChallengeItem[] = [
   {
     number: "01",
-    text: "Membership numbers plateau — and no one knows why"
+    text: "✨ Nikkah Ceremony"
   },
   {
     number: "02",
-    text: "Marketing spend yields little to no measurable return"
+    text: "💍 Engagement"
   },
   {
     number: "03",
-    text: "Staff lack the training to convert inquiries into members"
+    text: "🎉 Birthday Party"
   },
   {
     number: "04",
-    text: "Financial reporting is unclear, and profitability is uncertain"
+    text: "🌸 Mehndi Event"
+  },
+  {
+    number: "05",
+    text: "🎂 Anniversary"
+  },
+  {
+    number: "06",
+    text: "👨‍👩‍👧 Family Gathering"
+  },
+  {
+    number: "07",
+    text: "🏢 Corporate Event"
+  },
+  {
+    number: "08",
+    text: "🤝 Matrimonial Event"
+  },
+  {
+    number: "09",
+    text: "🎓 Graduation Celebration"
+  },
+  {
+    number: "10",
+    text: "📸 Photoshoot or Private Event"
   }
 ];
 
