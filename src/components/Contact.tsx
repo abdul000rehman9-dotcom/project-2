@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 import { Phone, Mail, MapPin, MessageSquare, CheckCircle, Shield } from "lucide-react";
 
 // Configurable constants for easy editing
-const WHATSAPP_NUMBER = "+92 3032789312";
-const WHATSAPP_DISPLAY = "+92 3032789312";
-const PHONE_NUMBER = "+92 3032789312";
+const WHATSAPP_NUMBER = "+92 3222165557";
+const WHATSAPP_DISPLAY = "+92 3222165557";
+const PHONE_NUMBER = "+92 3222165557";
 const EMAIL_ADDRESS = "contact@horizonleisure.pk";
 const OFFICE_LOCATION = "Karachi, Pakistan";
 
